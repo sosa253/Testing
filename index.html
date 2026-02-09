@@ -4,9 +4,10 @@
  <meta charset="UTF-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
  <title>Will you be my Valentine?</title>
+ <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
 
  <!-- Confetti library -->
- <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+ <!script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
  <style>
  :root {
@@ -28,6 +29,7 @@
  font-family: system-ui, sans-serif;
  overflow: hidden;
  padding: 16px;
+ <div id="tsparticles"></div>
  }
 
  /* FULL-SCREEN CONFETTI CANVAS */
@@ -290,13 +292,24 @@
  noBtn.addEventListener("click", e => e.preventDefault());
 
  /* ---------- YES CLICK ---------- */
- yesBtn.addEventListener("click", () => {
+ /*yesBtn.addEventListener("click", () => {
  zone.style.display = "none";
  hint.style.display = "none"; // HIDE THE HINT
  result.style.display = "block";
  resizeConfettiCanvas();
  fullScreenConfetti();
- });
+ });*/
+ function showHearts() {
+  tsParticles.load("tsparticles", {
+    particles: {
+      number: { value: 40 },
+      shape: { type: "heart" },
+      size: { value: 12 },
+      move: { enable: true, speed: 6 },
+      opacity: { value: 0.8 }
+    },
+    fullScreen: { enable: true }
+  });
  </script>
 </body>
 </html>
