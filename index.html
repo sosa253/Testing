@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Will You Be My Valentine?</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      margin-top: 100px;
+      background-color: #ffe6f0;
+    }
+    button {
+      padding: 12px 20px;
+      margin: 10px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    #yes { background-color: #ff4d88; color: white; }
+    #no { background-color: #cccccc; }
+  </style>
+</head>
+
+<body>
+  <h1>Will you be my Valentine? 💕</h1>
+
+  <button id="yes" onclick="yesClicked()">Yes</button>
+  <button id="no" onclick="noClicked()">No</button>
+
+  <p id="message"></p>
+
+<script>
+function yesClicked() {
+  document.getElementById("message").innerHTML =
+  "Yay! I can't wait to spend Valentine's Day with you ❤️";
+}
+
+function noClicked() {
+  document.getElementById("message").innerHTML =
+  "Hmm… try clicking Yes again 😊";
+}
+</script>
+
+</body>
+</html>
