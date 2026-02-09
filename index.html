@@ -292,25 +292,13 @@
  noBtn.addEventListener("click", e => e.preventDefault());
 
  /* ---------- YES CLICK ---------- */
- /*yesBtn.addEventListener("click", () => {
+ yesBtn.addEventListener("click", () => {
  zone.style.display = "none";
  hint.style.display = "none"; // HIDE THE HINT
  result.style.display = "block";
  resizeConfettiCanvas();
  fullScreenConfetti();
- });*/
- <button onclick="showHearts()">Yes</button>
- function showHearts() {
-  tsParticles.load("tsparticles", {
-    particles: {
-      number: { value: 40 },
-      shape: { type: "heart" },
-      size: { value: 12 },
-      move: { enable: true, speed: 6 },
-      opacity: { value: 0.8 }
-    },
-    fullScreen: { enable: true }
-  });
+ });
  </script>
 </body>
 </html>
